@@ -1,0 +1,282 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage[english]{babel}
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.8}
+\hypersetup{colorlinks,breaklinks,linkcolor=darkblue,urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{gobble}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+\renewcommand{\labelitemi}{$-$}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Xiao Li}{\href{http://www.pololee.org}{http://www.pololee.org/}}{pololee1990@gmail.com}{(424) 278-5891}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+\header{Objective}
+
+\begin{body}
+	\vspace{14pt}
+	Software Engineer Intern Summer 2014
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Ph.D. in Computer Science --- Advisor: Prof. Mario Gerla} 
+	{}\hfill \emph{Sept 2012 - Present}{} \\
+	\emph{Special in Computer Networks}\\
+%	{\ \ \ \ \ }GPA: 3.67/4.00
+	\emph{University of California at Los Angeles}, Los Angeles, CA{} \\
+  \medskip
+	\textbf{B.S. in Computer Science} \hfill \emph{Aug 2008 - Jun 2012} \\
+	\emph{Xidian University}, Xi'an, China\\
+\end{body}
+
+\smallskip
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{ Technical Skills}
+
+\begin{body}
+	\vspace{14pt}
+	C, C++, Qualnet (\emph{Proficient})\\
+	\smallskip
+	Java, SQL, HTML/CSS, JavaScript, Matlab, R (\emph{Course Requirement})\\
+	\smallskip
+	Python, Bash, Git, Linux, \LaTeX, Markdown  (\emph{Interest}) \\
+%	\emph{\textbf{Programming:}}{} Java, HTML/CSS, bash, batch, JavaScript, STAF/STAX, Rational Functional Tester, \LaTeX, Ruby on Rails, Python, PHP, Visual Basic, SQL, Expect, WinTask, Injection, HyperScript, C++, C, Assembly\\
+%	\medskip
+%	\emph{\textbf{Operating Systems:}}{} Windows, Mac OS X, Linux, UNIX\\
+\end{body}
+
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Project Experience
+\header{Project Experience}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Big Data: Modeling and Mining the Web and Social Media(Course Project)}
+	\hfill\emph{Jan 2014 - Mar 2014}
+	\vspace*{-4pt}
+	\begin{itemize}
+	\item
+	Crawling and data collection on \href{http://www.quora.com/}{Quora} (\emph{Tool: Selenium, BeautifulSoap Python Package})
+	\item
+	Topic modeling for Quora answers via LDA (\emph{Latent Dirichlet Allocation})
+	\item
+	Build recommendation system on \href{http://grouplens.org/datasets/movielens/}{MovieLens} via Collaborative filtering
+	\end{itemize}
+	
+	
+	\textbf{Performance Analysis of VANET Content Routing Based on Bloom Filter}\hfill \emph{Sept 2013 - Present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	\item Analyze and compare hierarchical bloom filter routing (HBFR) and cluster-head bloom filter routing
+	in VANET scenario
+	\item Design an analytical model to estimate performance and make more realistic simulation using CORNER channel model and real road map
+	\end{itemize}
+%	
+%	\textbf{Small UAS Routing Enhanced Networks} \hfill \emph{Jun 2013 - Sept 2013}\\
+%	\vspace*{-4pt}
+%	\begin{itemize} \itemsep -0pt
+%	\item Design queuing management mechanisms based on service differentiation
+%	\item Design routing techniques compatible with the proposed queuing
+%	\end{itemize}
+	 
+	 \textbf{Web Application -- Search and Navigate eBay Bidding Data(Course Project)}
+	 \hfill \emph{Sept 2013 - Dec 2013}\\
+	 	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Examine eBay data and design a relational schema, transform the XML data form and load it into MySQL
+		\item Build auction search Web Service supporting queries both on numeric and textual attributes
+		\item Build auction search Web site and allow easy mobile access
+	\end{itemize}
+	
+	\textbf{VANET Content Routing Using Hierarchical Bloom Filter} \hfill \emph{Jan 2013 - Jun 2013}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Propose a scalable content routing protocol based on hierarchical bloom filter (HBFR) in 
+		VANET scenario
+		\item Design location service of HBFR (management of location information, bloom 
+		filter) and implement simulation using Qualnet in C++. 
+%		For private data, HBFR achieves 45\% 
+%		shorter response time and about 70\% less traffic than that of CCN.
+	\end{itemize}
+
+%	\textbf {Quality of Experience Measurement of Multimedia Streaming} 
+%	\hfill \emph{May 2011 - Nov 2011}\\
+%	\vspace*{-4pt}
+%	\begin{itemize} \itemsep -0pt
+%		\item Learned general knowledge of WCDMA, QoS \& QoE of UMTS and multimedia services
+%		in mobile network
+%		\item Implement a two-level temporal pooling model in C for monitoring real-time quality of VoIP.
+%%		The RMSE (Root Mean Square Deviation) reduces by about 16\% compared with widely 	used E-model.
+%	\end{itemize}
+\end{body}
+
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+\header{Recent Publications}
+\begin{body}
+	\vspace{14pt}
+	\begin{enumerate}[leftmargin=0.25in,label={[\arabic*]}]
+	\item You Lu, \textbf{\emph{Xiao Li}}, Yu-Ting Yu, Mario Gerla, "Information-Centric Delay-Tolerant Mobile Ad-Hoc Networks", \emph{INFOCOM Workshop on Name Oriented Mobility}, April 2014
+	\item Yu-Ting Yu, Chris Tandiono, \textbf{\emph{Xiao Li}}, You Lu, M.Y. Sanadidi, Mario Gerla, "ICAN: Information-Centric Context-Aware Ad-Hoc Network", \emph{ICNC}, February 2014
+	\item Yu-Ting Yu, \textbf{\emph{Xiao Li}}, Mario Gerla, M.Y. Sanadidi, "Scalable VANET Content Routing Using Hierarchical Bloom Filter", \emph{IWCMC}, July 2013
+	\end{enumerate}
+%	\begin{thebibliography}{3}
+%	\bibitem{info}
+%	You Lu, Xiao Li, Yu-Ting Yu, Mario Gerla, "Information-Centric Delay-Tolerant Mobile Ad-Hoc Networks", \emph{INFOCOM 2014, Workshop on Name Oriented Mobility}, April 2014
+%	\end{thebibliography}
+%	\vspace{14pt}
+%	Yu-Ting Yu, Chris Tandiono, \textbf{\emph{Xiao Li}}, You Lu, M.Y. Sanadidi and Mario Gerla.
+%	``\textbf{ICAN: Information Centric Context-Aware Ad-Hoc Network}", in
+%	\emph{International Conference on Computing, Networking and Communications (ICNC)}. 2014.\\
+%	\smallskip
+%	
+%	Yu-Ting Yu, \textbf{\emph{Xiao Li}}, Mario Gerla, and M.Y. Sanadidi. 
+%	``\textbf{Scalable VANET Content Routing Using Hierarchical Bloom Filter}'', in 
+%	\emph{Wireless Communications and Mobile Computing Conference (IWCMC)}. 2013.\\
+%	\smallskip
+
+
+%	Fuzheng Yang, Liangliang Jiang, \textbf{\emph{Xiao Li}}.
+%	``\textbf{Realtime Quality Assessment for Voice over IP}", in
+%	\emph{Concurrency and Computation: Practice and Experience}. 2012\\
+\end{body}
+
+\smallskip
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+\header{Career History}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Teaching Assistant}, \emph{Computer Science Department, UCLA} 
+	\hfill {} \emph{Sept 2013 - Present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item CS118: Computer Network Fundamentals
+		\item CS31: Introduction to Computer Science I
+		\item CS112: Modeling Uncertainty in Information Systems
+	\end{itemize}
+
+	\textbf{Research Assistant}, \emph{Network Research Lab, UCLA}
+	\hfill {} \emph{Sept 2012 - Sept 2013}\\
+
+	\smallskip
+	
+	\textbf{Research Assistant}, \emph{State Key Lab of ISN, Xidian University}
+	\hfill {} \emph{May 2011 - Nov 2011}\\
+
+%	\textbf{Co-founder, President}, Students in Software Engineering (SSE) \hfill {} \emph{Summer 2008 - Spring 2011}\\
+%	\smallskip
+%	\textbf{Mentor}, Undergraduate and graduate student mentor \hfill{} \emph{Fall 2007 - Spring 2011}\\
+\end{body}
+
+%\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+%\header{Awards and Honors}
+%
+%\begin{body}
+%	\vspace{14pt}
+%	\textbf{College Scholar}, The University of Texas at Austin \hfill{} \emph{2003 - 2005}\\
+%	\smallskip
+%	\textbf{Runner-up}, Moore Elementary Recycling Slogan Contest
+%\end{body}
+\end{document}
