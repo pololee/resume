@@ -1,5 +1,5 @@
-\documentclass[9pt]{article}
-\usepackage{fullpage}
+\documentclass[12pt]{article}
+\usepackage{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[usenames]{color}
@@ -10,12 +10,8 @@
   urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
 \usepackage{enumitem}
 \usepackage{changepage}
+\usepackage{CJKutf8}
 
-\leftmargin=0.25in
-\oddsidemargin=0.25in
-\textwidth=6.0in
-\topmargin=-0.6in
-\textheight=10in
 
 \raggedright
 
@@ -51,15 +47,15 @@
   \end{changemargin}
   }
 
-  \newcommand{\contact}[4]{
-  \begin{changemargin}{-0.5in}{-0.5in}
+  \newcommand{\contact}[1]{
+%  \begin{changemargin}{-0.5in}{-0.5in}
   \begin{center}
   {\Large \scshape {#1}}\\ \smallskip
-  {#2}\\ \smallskip
-  {#3}\\ \smallskip
-  {#4}\smallskip
+%  {#2}\\ \smallskip
+%  {#3}\\ \smallskip
+%  {#4}\smallskip
   \end{center}
-  \end{changemargin}
+%  \end{changemargin}
   }
 
   \newenvironment{body} {
@@ -83,17 +79,36 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Name
-\contact{Xiao (Polo) Li}{\href{mailto:pololee1990@gmail.com}
-  {pololee1990@gmail.com}}{(424) 278-5891}
-
+%\vspace{-5pt}
+\contact{Resume - Xiao Li
+\begin{CJK}{UTF8}{gbsn}
+李啸
+\end{CJK}
+}
+\vspace{8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Objective
-\header{Objective}
-
+\header{Personal Information}
 \begin{body}
-\vspace{14pt}
-Full-time Software Engineer
+  \vspace{16pt}
+  \begin{tabular}{ p{7cm} p{8cm} }
+  \textbf{Name}: Xiao Li \begin{CJK}{UTF8}{gbsn} 李啸 \end{CJK} & \textbf{Gender}: Male \\
+  \textbf{Date of Birth}: Feb 19th, 1990 & \textbf{Place of Birth}: Yan'an, Shaanxi, China \\
+  \textbf{Email}: pololee1990@gmail.com & \textbf{Phone}: 13992897545 \\
+%  \multicolumn{2}{l}{\textbf{Home Address}: No.8 Fengqi West Road, Chang'an District, Xi'an, Shaanxi  710100(China)} \\
+%  \multicolumn{2}{l}{\textbf{Home Address}: 11130 Rose Avenue APT\#204, Los Angeles, CA 90034(U.S.A)}\\
+%  \multicolumn{2}{l}{\textbf{School Address}: 417 Charles E. Young Drive West, Los Angeles, CA 90095}
+  \end{tabular}
+  \begin{tabular}{l l}
+    \textbf{Home address}: & No.8 Fengqi West Road, Chang'an District, \\
+    & Xi'an, ShaanXi, China  710100 \\
+    & 11130 Rose Avenue APT\#204, Los Angeles \\
+    & California, U.S.A 90034 \\
+    \textbf{School address}: & 417 Charles E. Young Drive West, Los Angeles,\\
+    & California, U.S.A 90095
+  \end{tabular}
+
 \end{body}
 
 \smallskip
@@ -104,126 +119,20 @@ Full-time Software Engineer
 \header{Education}
 
 \begin{body}
-  \vspace{14pt}
-  \textbf{M.S. in Computer Science} \hspace{5mm} GPA: 3.76/4.00
-  \hfill \emph{Sept 2012 - Mar 2015}{} \\
-  \emph{University of California at Los Angeles}, Los Angeles, CA{} \\
-  \medskip
-  \textbf{B.S. in Computer Science} \hspace{6mm} GPA: 90.63/100
-  \hfill \emph{Aug 2008 - Jun 2012} \\
-  \emph{Xidian University}, Xi'an, China\\
+  \vspace{16pt}
+  \begin{tabular}{r | l}
+    Sept 2012 - Current & University of California, Los Angeles \\
+    & Ph.D. in Computer Science, GPA:  3.764/5.00\\
+    & Advisor: Prof. Mario Gerla \\
+    & Research focus: Computer Networking \\
+    \multicolumn{2}{c}{} \\
+    Aug 2008 - Jun 2012 & Xidian University, Xi'an, China \\
+    & Bachelor of Science in Computer Science \\
+    & GPA:  90.63/100
+  \end{tabular}
 \end{body}
 
 \smallskip
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Skills
-\header{ Technical Skills}
-
-\begin{body}
-\vspace{14pt}
-  Ruby, HTML/CSS, JavaScript, C/C++, Ruby on Rails, Git (\emph{Proficient})\\
-  \smallskip
-  Python, Bash, \LaTeX, Markdown, UNIX, \href{https://www.docker.com/}
-    {Docker}, \href{https://coreos.com/}{CoreOS}  (\emph{Interests}) \\
-  \smallskip
-  Java, SQL, Matlab, R (\emph{Course Requirement}) \\
-\end{body}
-
-\smallskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Project Experience
-\header{Project Experience}
-
-\begin{body}
-  \vspace{14pt}
-  \emph{\textbf{Software Engineering Intern at \href{http://www.appfolio.com/}
-    {AppFolio Inc.}, Santa Barbara, CA}}
-  \hfill\emph{Jun 2014 - Sept 2014}\\
-  \vspace*{-2pt}
-  \begin{itemize}[leftmargin=0.15in]
-    \item
-    Researching the suitability of LXC-based Docker to power AppFolio applications
-    \vspace*{-2pt}
-    \begin{itemize}[leftmargin=0.1in]
-      \item
-      Dockerizd a Rails App, a MySQL service and a Memcached service
-      \item
-      Set up a CoreOS cluster on AWS and deployed the Docker containers on it
-      \item
-      Applied Docker into the development workflow by integrating Docker into
-      TeamCity CI to speed up running test suites
-    \end{itemize}
-    \item
-    Upgrading online payment service using a new ACH payment processor
-    (\href{http://www.profitstars.com/pages/default.aspx}{ProfitStars})
-    \vspace*{-2pt}
-    \begin{itemize}[leftmargin=0.1in]
-      \item
-      Parallelized the disbursement job to speed up the payment process
-      \item
-      Updated the user interface with the new ACH payment processor
-      \item
-      Gained hand-on experience on Agile development, Rails framework, web
-      app deployment process
-    \end{itemize}
-  \end{itemize}
-  
-  \emph{\textbf{Research Assistant at \href{http://nrlweb.cs.ucla.edu/}
-    {Network Research Lab, UCLA}}}
-  \hfill\emph{Sept 2012 - Present}
-  \vspace*{-2pt}
-  \begin{itemize}[leftmargin=0.15in]
-    \item
-    Performance analysis of VANET content routing based on Bloom filter
-    \vspace*{-2pt}
-    \begin{itemize}[leftmargin=0.1in]
-      \item
-      Performing analysis of two VANET content routing protocols, hierarchical
-      Bloom filter routing and cluster-head Bloom filter routing
-      \item
-      Implemented the cluster-head Bloom routing in \href
-      {http://web.scalable-networks.com/content/qualnet}{Qualnet Simulator}
-      (C++)
-    \end{itemize}
-    \item
-    VANET content routing using hierarchical Bloom filter
-    \vspace*{-2pt}
-    \begin{itemize}[leftmargin=0.1in]
-      \item
-      Designed a scalable content routing protocol based on hierarchical Bloom filter
-      for VANET
-      \item
-      Implemented the hierarchical Bloom filter routing in \href
-      {http://web.scalable-networks.com/content/qualnet}{Qualnet Simulator}
-      (C++)
-    \end{itemize}
-  \end{itemize}
-  
-  \emph{\textbf{Personal Projects}}
-  \hfill\emph{Jul 2014 - Present}
-  \vspace*{-2pt}
-  \begin{itemize}[leftmargin=0.15in]
-    \item
-    Xmfun -- Yet another music downloader (\href{https://github.com/xmfun}
-    {https://github.com/xmfun})
-    \begin{itemize}[leftmargin=0.1in]
-      \item
-      Building a Rails application with \href{https://rubygems.org/gems/xmfun}
-      {xmfun gem} (https://rubygems.org/gems/xmfun)
-      \item
-      Designed a command-line interface for xmfun
-      \item
-      Completed unit tests for \href{https://rubygems.org/gems/xmfun}
-      {xmfun gem}
-    \end{itemize}
-  \end{itemize}
-\end{body}
-
-\smallskip
-
 % \newpage{} % uncomment this line if you want to force a new page
 
 
@@ -245,28 +154,9 @@ Full-time Software Engineer
     Yu-Ting Yu, \textbf{\emph{Xiao Li}}, Mario Gerla, M.Y. Sanadidi,
     "Scalable VANET Content Routing Using Hierarchical Bloom Filter",
     \emph{IWCMC}, July 2013
+    \item
+    Fuzheng Yang, Liangliang Jiang, \textbf{\emph{Xiao Li}}, "Real-time quality assessment for voice over IP", \emph{Concurrency and Computation: Practice and Experience} 24.11 (2012): 1192-1199.
   \end{enumerate}
-\end{body}
-
-\smallskip
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Leadership
-\header{Teaching Experience}
-
-\begin{body}
-\vspace{14pt}
-\emph{\textbf{Teaching Assistant, Computer Science Department, UCLA}}
-\hfill \emph{Sept 2013 - Present}\\
-\vspace*{-4pt}
-  \begin{itemize} \itemsep -0pt
-    \item CS35L: Software Construction Laboratory
-    \item CS118: Computer Network Fundamentals
-    \item CS31: Introduction to Computer Science I
-    \item CS112: Modeling Uncertainty in Information Systems
-  \end{itemize}
 \end{body}
 
 \end{document}
